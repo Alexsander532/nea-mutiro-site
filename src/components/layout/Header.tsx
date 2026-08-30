@@ -1,9 +1,10 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { motion, useScroll, useMotionValueEvent } from "framer-motion";
-import { Leaf, Menu, Search, X } from "lucide-react";
+import { Menu, Search, X } from "lucide-react";
 import { useState } from "react";
 import { navItems } from "@/data/navigation";
 
@@ -34,14 +35,19 @@ export function Header() {
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
         <Link href="/" className="group flex items-center gap-3">
           <motion.span
-            whileHover={{ rotate: 12, scale: 1.1 }}
+            whileHover={{ rotate: 6, scale: 1.05 }}
             transition={{ type: "spring", stiffness: 300 }}
           >
-            <Leaf className="h-6 w-6 text-green" />
+            <Image
+              src="/images/logo_neaMutiro.png"
+              alt="NEA-Mutiró"
+              width={96}
+              height={96}
+              className="h-16 w-auto"
+              quality={100}
+              priority
+            />
           </motion.span>
-          <span className="font-display text-xl font-bold text-text lg:text-2xl">
-            NEA-Mutiró
-          </span>
         </Link>
 
         <nav className="hidden items-center gap-6 lg:flex">

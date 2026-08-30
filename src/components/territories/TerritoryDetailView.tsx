@@ -80,22 +80,24 @@ export function TerritoryDetailView({ territory }: Props) {
               ))}
             </FadeIn>
 
-            <FadeIn delay={0.15} className="mt-12">
-              <figure className="overflow-hidden rounded-lg border border-border/30 bg-cream-dark p-6 shadow-sm">
-                <div className="relative h-[280px] overflow-hidden rounded-md md:h-[400px]">
-                  <Image
-                    src={detail.figure.src}
-                    alt={detail.figure.caption}
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 768px) 100vw, 700px"
-                  />
-                </div>
-                <figcaption className="mt-4 text-center text-sm font-semibold uppercase tracking-wider text-text-muted">
-                  {detail.figure.caption}
-                </figcaption>
-              </figure>
-            </FadeIn>
+            {detail.figure && (
+              <FadeIn delay={0.15} className="mt-12">
+                <figure className="overflow-hidden rounded-lg border border-border/30 bg-cream-dark p-6 shadow-sm">
+                  <div className="relative h-[280px] overflow-hidden rounded-md md:h-[400px]">
+                    <Image
+                      src={detail.figure.src}
+                      alt={detail.figure.caption}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 768px) 100vw, 700px"
+                    />
+                  </div>
+                  <figcaption className="mt-4 text-center text-sm font-semibold uppercase tracking-wider text-text-muted">
+                    {detail.figure.caption}
+                  </figcaption>
+                </figure>
+              </FadeIn>
+            )}
 
             <FadeIn delay={0.2} className="mt-14">
               <h2 className="font-display text-3xl font-semibold text-green">
@@ -110,16 +112,18 @@ export function TerritoryDetailView({ territory }: Props) {
               </div>
             </FadeIn>
 
-            <FadeIn delay={0.25} className="mt-14">
-              <blockquote className="rounded-r-lg border-l-4 border-brown bg-cream-dark py-6 pl-7 pr-6">
-                <p className="font-display text-xl italic leading-relaxed text-brown md:text-2xl">
-                  &ldquo;{detail.quote.text}&rdquo;
-                </p>
-                <footer className="mt-4 text-sm font-semibold uppercase tracking-wider text-text-muted">
-                  — {detail.quote.author}
-                </footer>
-              </blockquote>
-            </FadeIn>
+            {detail.quote && (
+              <FadeIn delay={0.25} className="mt-14">
+                <blockquote className="rounded-r-lg border-l-4 border-brown bg-cream-dark py-6 pl-7 pr-6">
+                  <p className="font-display text-xl italic leading-relaxed text-brown md:text-2xl">
+                    &ldquo;{detail.quote.text}&rdquo;
+                  </p>
+                  <footer className="mt-4 text-sm font-semibold uppercase tracking-wider text-text-muted">
+                    — {detail.quote.author}
+                  </footer>
+                </blockquote>
+              </FadeIn>
+            )}
           </article>
 
           {/* Sidebar */}

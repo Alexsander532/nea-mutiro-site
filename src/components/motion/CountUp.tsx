@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useInView } from "framer-motion";
+import { useInView } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 
 type CountUpProps = {
@@ -17,7 +17,7 @@ export function CountUp({ value, suffix = "", duration = 1.8 }: CountUpProps) {
   useEffect(() => {
     if (!isInView) return;
 
-    let start = 0;
+    const start = 0;
     const startTime = performance.now();
 
     const tick = (now: number) => {
