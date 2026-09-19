@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ChevronRight, Download, MapPin, Sprout, Users } from "lucide-react";
+import { ChevronRight, ExternalLink, MapPin, Sprout, Users } from "lucide-react";
 import type { Territory } from "@/data/territories";
 import { FadeIn } from "@/components/motion/FadeIn";
 
@@ -148,14 +148,13 @@ export function TerritoryDetailView({ territory }: Props) {
                       );
                     })}
                   </ul>
-                  <motion.button
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
+                  <Link
+                    href="/repositorio"
                     className="mt-8 flex w-full items-center justify-center gap-2 rounded-lg bg-brown py-3.5 text-sm font-semibold uppercase tracking-wider text-white shadow-sm"
                   >
-                    <Download className="h-4 w-4" />
-                    Baixar Relatório (PDF)
-                  </motion.button>
+                    <ExternalLink className="h-4 w-4" />
+                    Acessar repositório
+                  </Link>
                 </div>
               </FadeIn>
 

@@ -1,13 +1,13 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Mail, Share2 } from "lucide-react";
+import { ExternalLink, Mail, Share2 } from "lucide-react";
+import { collaboratorLinks, contact, siteName } from "@/data/site";
 
 const institutionLogos = [
-  { src: "/logos/divididos/CEFET-MG_transparente.png", alt: "CEFET-MG" },
-  { src: "/logos/divididos/UEMG_transparente.png", alt: "UEMG" },
-  { src: "/logos/divididos/CNPq_transparente.png", alt: "CNPq" },
-  { src: "/logos/divididos/Kaipora_UEMG_transparente.png", alt: "Kaipora — UEMG" },
-  { src: "/logos/divididos/SoFiA_transparente.png", alt: "SoFiA" },
+  { src: "/logos/divididos/CEFET-MG_transparente.png", alt: "CEFET-MG – instituição executora" },
+  { src: "/logos/divididos/UEMG_transparente.png", alt: "UEMG – instituição coexecutora" },
+  { src: "/logos/Logo_Fiocruz.png", alt: "Fiocruz Minas – Instituto René Rachou" },
+  { src: "/logos/divididos/CNPq_transparente.png", alt: "CNPq – financiamento" },
 ];
 
 export function Footer() {
@@ -30,57 +30,88 @@ export function Footer() {
             </div>
           ))}
         </div>
+        <p className="pb-6 text-center text-xs font-semibold uppercase tracking-widest text-text-muted">
+          Execução · Coexecução · Financiamento
+        </p>
       </div>
 
-      <div className="mx-auto grid max-w-7xl gap-10 px-6 py-16 md:grid-cols-3 lg:px-8">
+      <div className="mx-auto grid max-w-7xl gap-10 px-6 py-16 md:grid-cols-4 lg:px-8">
         <div className="space-y-6">
           <Link href="/" className="flex items-center gap-3">
             <Image
               src="/images/logo_neaMutiro.png"
-              alt="NEA-Mutiró"
-              width={80}
-              height={80}
-              className="h-14 w-auto"
+              alt={siteName}
+              width={112}
+              height={112}
+              className="h-20 w-auto"
               quality={100}
             />
           </Link>
           <div className="space-y-4 text-base text-text">
-            <p>© 2024 NEA-Mutiró. Núcleo de Estudos em Agroecologia e Bem-Viver.</p>
-            <p>Execução e parcerias: CEFET-MG, UEMG, CNPq, Kaipora e SoFiA.</p>
+            <p>{siteName}.</p>
+            <p>CEFET-MG é a instituição executora; UEMG e Fiocruz Minas – Instituto René Rachou são coexecutoras.</p>
           </div>
         </div>
 
         <div className="space-y-4">
-          <h4 className="text-sm font-bold uppercase tracking-wider text-text">Links Úteis</h4>
-          {["Políticas de Privacidade", "Acessibilidade", "Documentos Importantes"].map(
-            (link) => (
-              <Link
-                key={link}
-                href="#"
-                className="block text-base text-text hover:text-brown transition-colors"
-              >
-                {link}
-              </Link>
-            )
-          )}
+          <h4 className="text-sm font-bold uppercase tracking-wider text-text">Links úteis</h4>
+          <Link href="/links-uteis" className="block text-base text-text transition-colors hover:text-brown">
+            Instituições e colaboradores
+          </Link>
+          <Link href="/repositorio" className="block text-base text-text transition-colors hover:text-brown">
+            Repositório
+          </Link>
+          <Link href="/territorios" className="block text-base text-text transition-colors hover:text-brown">
+            Territórios focais
+          </Link>
         </div>
 
         <div className="space-y-4">
-          <h4 className="text-sm font-bold uppercase tracking-wider text-text">Fale Conosco</h4>
+          <h4 className="text-sm font-bold uppercase tracking-wider text-text">Colaboradores</h4>
+          {collaboratorLinks.map((link) => (
+            <a
+              key={link.label}
+              href={link.href}
+              target="_blank"
+              rel="noreferrer"
+              className="flex items-center gap-2 text-base text-text transition-colors hover:text-brown"
+            >
+              {link.label}
+              <ExternalLink className="h-3.5 w-3.5" />
+            </a>
+          ))}
+        </div>
+
+        <div className="space-y-4">
+          <h4 className="text-sm font-bold uppercase tracking-wider text-text">Fale conosco</h4>
           <a
-            href="mailto:contato@neamutiro.org.br"
-            className="flex items-center gap-3 text-base text-text hover:text-brown transition-colors"
+            href={`mailto:${contact.email}`}
+            className="flex items-center gap-3 text-base text-text transition-colors hover:text-brown"
           >
             <Mail className="h-5 w-5 shrink-0" />
-            contato@neamutiro.org.br
+            {contact.email}
           </a>
-          <a
-            href="#"
-            className="inline-flex rounded-full bg-cream-dark p-2 text-text hover:bg-green-light/40 transition-colors"
-            aria-label="Redes sociais"
-          >
-            <Share2 className="h-5 w-5" />
-          </a>
+          <p className="text-base text-text">{contact.instagramHandle}</p>
+          <div className="flex gap-2">
+            <a
+              href={contact.instagramUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex rounded-full bg-cream-dark p-2 text-text transition-colors hover:bg-green-light/40"
+              aria-label="Instagram do NEA Mutiró"
+            >
+              <Share2 className="h-5 w-5" />
+            </a>
+            <a
+              href="https://www.youtube.com/watch?v=X44rTqK-1qA"
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex rounded-full bg-cream-dark p-2 text-text transition-colors hover:bg-green-light/40"
+              aria-label="YouTube do SoFiA / NEA Mutiró"
+            >
+              <ExternalLink className="h-5 w-5" />
+            </a>
+          </div>
         </div>
       </div>
     </footer>

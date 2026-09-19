@@ -18,7 +18,7 @@ export default function TerritoriosPage() {
     <div className="mx-auto max-w-7xl px-6 py-16 lg:px-8 lg:py-24">
       <FadeIn className="mx-auto mb-20 max-w-3xl text-center">
         <h1 className="font-display text-4xl font-bold text-brown md:text-5xl">
-          Territórios Prioritários
+          Territórios Focais
         </h1>
         <p className="mt-6 text-lg text-text-muted">
           Nosso trabalho de pesquisa e extensão está enraizado em comunidades que

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Projetos e Ações",
+  title: "Ensino, Pesquisa e Extensão",
 };
 
 export default function ProjetosLayout({ children }: { children: React.ReactNode }) {

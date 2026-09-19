@@ -40,10 +40,10 @@ export function Header() {
           >
             <Image
               src="/images/logo_neaMutiro.png"
-              alt="NEA-Mutiró"
-              width={96}
-              height={96}
-              className="h-16 w-auto"
+              alt="Núcleo de Estudos em Agroecologia – NEA Mutiró"
+              width={148}
+              height={148}
+              className="h-20 w-auto"
               quality={100}
               priority
             />

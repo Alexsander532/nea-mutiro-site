@@ -174,7 +174,7 @@ export const projects: Project[] = [
       ],
       heroImage: "/images/formacao.jpg",
       intro: [
-        "A Troca de Saberes é um eixo transversal do NEA-Mutiró que promove encontros regulares entre comunidades tradicionais, agricultores familiares, estudantes e pesquisadores.",
+        "A Troca de Saberes é um eixo transversal do Núcleo de Estudos em Agroecologia – NEA Mutiró que promove encontros regulares entre comunidades tradicionais, agricultores familiares, estudantes e pesquisadores.",
         "Em rodas de conversa, oficinas práticas e visitas de intercâmbio, valorizamos o conhecimento empírico e a ciência acadêmica como fontes complementares de aprendizado.",
       ],
       introSecondary: [
@@ -232,7 +232,7 @@ export const projects: Project[] = [
       ],
       heroImage: "/images/formacao.jpg",
       intro: [
-        "O curso de Formação em Agroecologia capacita jovens agricultores e estudantes em tecnologias sociais sustentáveis, integrando teoria e prática em campo nos territórios parceiros do NEA-Mutiró.",
+        "O curso de Formação em Agroecologia capacita jovens agricultores e estudantes em tecnologias sociais sustentáveis, integrando teoria e prática em campo nos territórios parceiros do Núcleo de Estudos em Agroecologia – NEA Mutiró.",
         "Com carga horária de 120 horas, o programa aborda desde os fundamentos ecológicos da agroecologia até a gestão de projetos comunitários e políticas públicas de segurança alimentar.",
       ],
       introSecondary: [

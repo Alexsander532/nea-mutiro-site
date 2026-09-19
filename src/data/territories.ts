@@ -37,12 +37,12 @@ export const territories: Territory[] = [
     tagColor: "green",
     description:
       "A maior favela de Belo Horizonte, símbolo de resistência e luta por direitos, com iniciativas agroecológicas fortalecidas em parceria com a ASMAC.",
-    image: "/images/vista-urbana.jpg",
+    image: "/images/territorios/cabana-pai-tomas/1127ac88-d196-4524-b5c2-1cee45ecc6a6.JPG",
     imagePosition: "left",
     detail: {
       subtitle:
         "Considerada a maior favela (termo retomado pelo IBGE) de Belo Horizonte e a segunda maior de Minas Gerais, a Cabana do Pai Tomás é um símbolo de resistência e organização comunitária.",
-      heroImage: "/images/vista-urbana.jpg",
+      heroImage: "/images/territorios/cabana-pai-tomas/1127ac88-d196-4524-b5c2-1cee45ecc6a6.JPG",
       chips: [
         { label: "Periferia Urbana", variant: "green" },
         { label: "Aglomerado", variant: "pink" },
@@ -82,12 +82,12 @@ export const territories: Territory[] = [
     tagColor: "brown",
     description:
       "Aldeia indígena em território de retomada que resiste e mantém vivos seus conhecimentos agroecológicos e saberes tradicionais.",
-    image: "/images/aldeia.jpg",
+    image: "/images/territorios/aldeia-kamaka-mongoio/012a03c4-a816-4050-9df6-7d0e612d0e83.JPG",
     imagePosition: "right",
     detail: {
       subtitle:
         "Localizada no Vale do Córrego Areias, em Brumadinho, a Aldeia Indígena Kamakã Mongoió está situada em um território de retomada.",
-      heroImage: "/images/aldeia.jpg",
+      heroImage: "/images/territorios/aldeia-kamaka-mongoio/012a03c4-a816-4050-9df6-7d0e612d0e83.JPG",
       chips: [
         { label: "Comunidade Indígena", variant: "green" },
         { label: "Território de Retomada", variant: "pink" },
@@ -98,7 +98,7 @@ export const territories: Territory[] = [
       ],
       sectionTitle: "Intercâmbios, Hortas e Agroflorestamento",
       sectionBody: [
-        "Por meio dessa parceria, o NEA promove experiências de intercâmbio entre comunidades, oferecendo debates, oficinas e trocas de saberes, além da construção de novas hortas comunitárias e iniciativas de agroflorestamento.",
+        "Por meio dessa parceria, o Núcleo de Estudos em Agroecologia – NEA Mutiró promove experiências de intercâmbio entre comunidades, oferecendo debates, oficinas e trocas de saberes, além da construção de novas hortas comunitárias e iniciativas de agroflorestamento.",
       ],
       info: [
         { label: "Localização", value: "Brumadinho, Vale do Córrego Areias (MG)" },
@@ -127,12 +127,12 @@ export const territories: Territory[] = [
     tagColor: "orange",
     description:
       "Quilombo com ocupação que remonta ao século XVIII, marcado pela forte presença de práticas agroecológicas, culturais e pela participação feminina.",
-    image: "/images/quilombo.jpg",
+    image: "/images/territorios/misturadas/1e4b72c5-e212-4a12-9b34-f1606f7e0fe4.jpg",
     imagePosition: "left",
     detail: {
       subtitle:
         "Localizado no município de Araçuaí, o Quilombo Córrego do Narciso remonta sua ocupação ao século XVIII e carrega forte presença de práticas agroecológicas e culturais.",
-      heroImage: "/images/paisagem-aracuai.jpg",
+      heroImage: "/images/territorios/misturadas/1e4b72c5-e212-4a12-9b34-f1606f7e0fe4.jpg",
       chips: [
         { label: "Comunidade Quilombola", variant: "green" },
         { label: "Saberes Tradicionais", variant: "pink" },
@@ -142,7 +142,7 @@ export const territories: Territory[] = [
       ],
       sectionTitle: "Agroecologia, Cultura e Participação Feminina",
       sectionBody: [
-        "É um território com forte presença de práticas agroecológicas e culturais, que traz ao NEA a expressiva participação feminina em suas lutas, bem como a promoção de encontros e debates sobre saberes tradicionais, geração de renda, agroecologia, crise ambiental e educação popular.",
+        "É um território com forte presença de práticas agroecológicas e culturais, que traz ao Núcleo de Estudos em Agroecologia – NEA Mutiró a expressiva participação feminina em suas lutas, bem como a promoção de encontros e debates sobre saberes tradicionais, geração de renda, agroecologia, crise ambiental e educação popular.",
       ],
       info: [
         { label: "Localização", value: "Araçuaí (MG)" },

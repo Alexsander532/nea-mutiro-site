@@ -28,8 +28,8 @@
   --color-text-light: var(--text-light);
   --color-border: var(--border);
   --color-accent: var(--accent);
-  --font-sans: var(--font-open-sans);
-  --font-display: var(--font-lora);
+  --font-sans: system-ui, sans-serif;
+  --font-display: Georgia, serif;
 }
 
 html {
@@ -39,9 +39,9 @@ html {
 body {
   background: var(--cream);
   color: var(--text);
-  font-family: var(--font-open-sans), system-ui, sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
 .font-display {
-  font-family: var(--font-lora), Georgia, serif;
+  font-family: Georgia, "Times New Roman", serif;
 }
