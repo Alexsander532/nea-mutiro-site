@@ -92,7 +92,6 @@ export function Footer() {
             <Mail className="h-5 w-5 shrink-0" />
             {contact.email}
           </a>
-          <p className="text-base text-text">{contact.instagramHandle}</p>
           <div className="flex gap-2">
             <a
               href={contact.instagramUrl}
