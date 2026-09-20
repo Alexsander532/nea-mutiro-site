@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
-import { ExternalLink, Mail, Share2 } from "lucide-react";
+import { ExternalLink, Mail } from "lucide-react";
+import { InstagramIcon, YoutubeIcon } from "@/components/icons/SocialIcons";
 import { collaboratorLinks, contact, siteName } from "@/data/site";
 
 const institutionLogos = [
@@ -100,7 +101,7 @@ export function Footer() {
               className="inline-flex rounded-full bg-cream-dark p-2 text-text transition-colors hover:bg-green-light/40"
               aria-label="Instagram do NEA Mutiró"
             >
-              <Share2 className="h-5 w-5" />
+              <InstagramIcon className="h-5 w-5" />
             </a>
             <a
               href="https://www.youtube.com/watch?v=X44rTqK-1qA"
@@ -109,7 +110,7 @@ export function Footer() {
               className="inline-flex rounded-full bg-cream-dark p-2 text-text transition-colors hover:bg-green-light/40"
               aria-label="YouTube do SoFiA / NEA Mutiró"
             >
-              <ExternalLink className="h-5 w-5" />
+              <YoutubeIcon className="h-5 w-5" />
             </a>
           </div>
         </div>
