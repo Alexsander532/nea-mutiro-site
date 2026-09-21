@@ -4,35 +4,95 @@ import { ExternalLink, Mail } from "lucide-react";
 import { InstagramIcon, YoutubeIcon } from "@/components/icons/SocialIcons";
 import { collaboratorLinks, contact, siteName } from "@/data/site";
 
-const institutionLogos = [
-  { src: "/logos/divididos/CEFET-MG_transparente.png", alt: "CEFET-MG – instituição executora" },
-  { src: "/logos/divididos/UEMG_transparente.png", alt: "UEMG – instituição coexecutora" },
-  { src: "/logos/Logo_Fiocruz.png", alt: "Fiocruz Minas – Instituto René Rachou" },
-  { src: "/logos/divididos/CNPq_transparente.png", alt: "CNPq – financiamento" },
+type FooterLogo = {
+  src: string;
+  alt: string;
+  href?: string;
+};
+
+const executiveInstitutionLogos: FooterLogo[] = [
+  {
+    src: "/logos/divididos/CEFET-MG_transparente.png",
+    alt: "CEFET-MG – instituição executora",
+    href: "https://www.cefetmg.br/",
+  },
+  {
+    src: "/logos/divididos/UEMG_transparente.png",
+    alt: "UEMG – instituição executora",
+    href: "https://www.uemg.br/",
+  },
+  {
+    src: "/logos/FioCruz minas.png",
+    alt: "Fiocruz Minas – Instituto René Rachou – instituição executora",
+    href: "https://minas.fiocruz.br/",
+  },
 ];
+
+const fundingLogos: FooterLogo[] = [
+  {
+    src: "/logos/divididos/CNPq_transparente.png",
+    alt: "CNPq – financiamento",
+    href: "https://www.gov.br/cnpq/pt-br",
+  },
+];
+
+const collaboratorLogos: FooterLogo[] = [
+  {
+    src: "/logos/divididos/Kaipora_UEMG_transparente.png",
+    alt: "Kaiporá – colaborador",
+    href: "https://revista.uemg.br/index.php/sulear/article/view/6156",
+  },
+  {
+    src: "/logos/divididos/SoFiA_transparente.png",
+    alt: "Programa SoFiA – colaborador",
+    href: "https://www.sofia.cefetmg.br/",
+  },
+];
+
+function LogoGroup({ title, logos }: { title: string; logos: FooterLogo[] }) {
+  return (
+    <section>
+      <h3 className="mb-4 text-center text-xs font-bold uppercase tracking-[0.18em] text-text-muted">
+        {title}
+      </h3>
+      <div className="flex min-h-24 flex-wrap items-center justify-center gap-3">
+        {logos.map((logo) => {
+          const content = (
+            <div className="flex h-20 min-w-28 items-center justify-center rounded-xl bg-white px-4 py-3 shadow-sm transition-transform hover:scale-[1.03]">
+              <Image
+                src={logo.src}
+                alt={logo.alt}
+                width={220}
+                height={80}
+                className="max-h-14 w-auto max-w-[210px] object-contain"
+              />
+            </div>
+          );
+
+          return logo.href ? (
+            <a key={logo.alt} href={logo.href} target="_blank" rel="noreferrer" aria-label={logo.alt}>
+              {content}
+            </a>
+          ) : (
+            <div key={logo.alt}>{content}</div>
+          );
+        })}
+      </div>
+    </section>
+  );
+}
 
 export function Footer() {
   return (
     <footer className="mt-auto rounded-t-3xl border-t-2 border-border bg-footer">
       <div className="border-b border-border/40">
-        <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-center gap-x-8 gap-y-4 px-6 py-8 lg:px-8">
-          {institutionLogos.map((logo) => (
-            <div
-              key={logo.alt}
-              className="flex h-16 items-center rounded-lg bg-white px-4 py-2 shadow-sm"
-            >
-              <Image
-                src={logo.src}
-                alt={logo.alt}
-                width={140}
-                height={48}
-                className="h-12 w-auto max-w-[140px] object-contain"
-              />
-            </div>
-          ))}
+        <div className="mx-auto grid max-w-7xl gap-8 px-6 py-10 lg:grid-cols-[2fr_1fr_2fr] lg:px-8">
+          <LogoGroup title="Instituições executoras" logos={executiveInstitutionLogos} />
+          <LogoGroup title="Financiamento" logos={fundingLogos} />
+          <LogoGroup title="Colaboradores" logos={collaboratorLogos} />
         </div>
         <p className="pb-6 text-center text-xs font-semibold uppercase tracking-widest text-text-muted">
-          Execução · Coexecução · Financiamento
+          Execução · Financiamento · Colaboração
         </p>
       </div>
 
@@ -50,7 +110,7 @@ export function Footer() {
           </Link>
           <div className="space-y-4 text-base text-text">
             <p>{siteName}.</p>
-            <p>CEFET-MG é a instituição executora; UEMG e Fiocruz Minas – Instituto René Rachou são coexecutoras.</p>
+            <p>CEFET-MG, UEMG e Fiocruz Minas – Instituto René Rachou são instituições executoras.</p>
           </div>
         </div>
 

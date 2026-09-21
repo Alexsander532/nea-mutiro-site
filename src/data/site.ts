@@ -14,12 +14,12 @@ export const institutionalLinks = [
   },
   {
     label: "UEMG",
-    description: "Instituição coexecutora",
+    description: "Instituição executora",
     href: "https://www.uemg.br/",
   },
   {
     label: "Fiocruz Minas – Instituto René Rachou",
-    description: "Instituição coexecutora",
+    description: "Instituição executora",
     href: "https://minas.fiocruz.br/",
   },
   {
