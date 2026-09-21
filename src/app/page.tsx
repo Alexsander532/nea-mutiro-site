@@ -13,6 +13,7 @@ const focalTerritories = [
     title: "Aglomerado Cabana do Pai Tomás",
     location: "Belo Horizonte (MG)",
     description: "Agroecologia urbana, organização comunitária e segurança alimentar.",
+    heroImage: "/images/territorios/cabana-pai-tomas/11a0d8e1-f9b0-4340-9e63-8fe6696c5f0b.JPG",
     image: "/images/territorios/cabana-pai-tomas/1127ac88-d196-4524-b5c2-1cee45ecc6a6.JPG",
     alt: "Paisagem do Aglomerado Cabana do Pai Tomás",
     href: "/territorios/cabana-pai-tomas",
@@ -21,6 +22,7 @@ const focalTerritories = [
     title: "Aldeia Indígena Kamakã Mongóio",
     location: "Brumadinho (MG)",
     description: "Saberes tradicionais, território de retomada e intercâmbios agroecológicos.",
+    heroImage: "/images/territorios/aldeia-kamaka-mongoio/0497ce62-5fbb-46f8-a325-9173cfa7a40d.JPG",
     image: "/images/territorios/aldeia-kamaka-mongoio/012a03c4-a816-4050-9df6-7d0e612d0e83.JPG",
     alt: "Encontro na Aldeia Indígena Kamakã Mongóio",
     href: "/territorios/kamaka-mongoio",
@@ -29,6 +31,7 @@ const focalTerritories = [
     title: "Quilombo Córrego do Narciso",
     location: "Araçuaí (MG)",
     description: "Práticas agroecológicas, cultura e participação comunitária.",
+    heroImage: "/images/territorios/misturadas/0f1628c8-64c2-4ee7-a536-30be02c4f633.jpg",
     image: "/images/territorios/misturadas/1e4b72c5-e212-4a12-9b34-f1606f7e0fe4.jpg",
     alt: "Paisagem de um território quilombola",
     href: "/territorios/corrego-do-narciso",
@@ -69,16 +72,27 @@ export default function HomePage() {
             <motion.div
               whileHover={{ scale: 1.02 }}
               transition={{ type: "spring", stiffness: 200 }}
-              className="overflow-hidden rounded-[2rem] border-2 border-border shadow-xl"
+              className="grid h-[460px] grid-cols-2 grid-rows-2 gap-3 overflow-hidden rounded-[2rem] border-2 border-border bg-cream-dark p-3 shadow-xl sm:h-[420px]"
             >
-              <Image
-                src={focalTerritories[1].image}
-                alt={focalTerritories[1].alt}
-                width={640}
-                height={428}
-                className="h-[420px] w-full object-cover"
-                priority
-              />
+              {focalTerritories.map((territory, index) => (
+                <Link
+                  key={territory.title}
+                  href={territory.href}
+                  className={`group relative overflow-hidden rounded-2xl ${index === 0 ? "row-span-2" : ""}`}
+                >
+                  <Image
+                    src={territory.heroImage}
+                    alt={territory.alt}
+                    fill
+                    sizes="(max-width: 1024px) 50vw, 25vw"
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    priority={index === 0}
+                  />
+                  <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent p-4 pt-12">
+                    <p className="text-sm font-semibold text-white drop-shadow-md">{territory.title}</p>
+                  </div>
+                </Link>
+              ))}
             </motion.div>
           </FadeIn>
         </div>
