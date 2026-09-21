@@ -31,7 +31,7 @@ const coexecutors = [
     role: "Instituição coexecutora",
     description:
       "A Fiocruz Minas contribui para o diálogo entre ambiente, saúde e território, fomentando pesquisa, ensino e extensão junto a comunidades quilombolas, indígenas e periferias urbanas.",
-    image: "/logos/Logo_Fiocruz.png",
+    image: "/logos/FioCruz minas.png",
     href: "https://minas.fiocruz.br/",
   },
 ];
