@@ -40,12 +40,17 @@ const collaboratorLogos: FooterLogo[] = [
   {
     src: "/logos/divididos/Kaipora_UEMG_transparente.png",
     alt: "Kaiporá – colaborador",
-    href: "https://revista.uemg.br/index.php/sulear/article/view/6156",
+    href: "https://www.instagram.com/kaipora.biocultural/",
   },
   {
     src: "/logos/divididos/SoFiA_transparente.png",
     alt: "Programa SoFiA – colaborador",
     href: "https://www.sofia.cefetmg.br/",
+  },
+  {
+    src: "/logos/logopetconnecte.png",
+    alt: "PET conecTTE – colaborador",
+    href: "https://www.petconectte.cefetmg.br/",
   },
 ];
 

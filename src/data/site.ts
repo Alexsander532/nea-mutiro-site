@@ -39,14 +39,14 @@ export const collaboratorLinks = [
   {
     label: "Kaiporá – Laboratório de Estudos Bioculturais",
     description: "UEMG",
-    href: "https://revista.uemg.br/index.php/sulear/article/view/6156",
+    href: "https://www.instagram.com/kaipora.biocultural/",
     logo: "/logos/divididos/Kaipora_UEMG_transparente.png",
   },
   {
     label: "PET conecTTE",
     description: "CEFET-MG",
     href: "https://www.petconectte.cefetmg.br/",
-    logo: undefined,
+    logo: "/logos/logopetconnecte.png",
   },
 ] as const;
 
