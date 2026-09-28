@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { ArrowUpRight, Building2, Handshake, Landmark, Sprout } from "lucide-react";
+import { ArrowUpRight, Building2, Handshake, Landmark, Sprout, Users } from "lucide-react";
 import { FadeIn, StaggerContainer } from "@/components/motion/FadeIn";
+import { collaboratorMembers, members } from "@/data/members";
 import { collaboratorLinks, siteName } from "@/data/site";
 
 export const metadata: Metadata = {
@@ -77,6 +78,58 @@ export default function QuemSomosPage() {
                 tecnológica e de inovação, além da criação e do fortalecimento de tecnologias
                 sociais voltadas à soberania alimentar e à justiça ambiental.
               </p>
+            </div>
+          </FadeIn>
+        </div>
+      </section>
+
+      <section className="mb-20">
+        <FadeIn className="mx-auto mb-12 max-w-3xl text-center">
+          <p className="mb-4 text-sm font-semibold uppercase tracking-widest text-brown">Equipe</p>
+          <h2 className="font-display text-3xl font-bold text-text md:text-4xl">Quem constrói o NEA Mutiró</h2>
+          <p className="mt-6 text-lg leading-relaxed text-text-muted">
+            Coordenação e equipes colaboradoras atuam na construção compartilhada das ações do núcleo.
+          </p>
+        </FadeIn>
+
+        <div className="grid gap-8 lg:grid-cols-[1fr_1.5fr]">
+          <FadeIn>
+            <div className="h-full rounded-3xl border-2 border-border/50 bg-white p-8 shadow-md lg:p-10">
+              <div className="mb-7 flex items-center gap-3">
+                <Users className="h-7 w-7 text-brown" />
+                <h3 className="font-display text-2xl font-bold text-text">Coordenação</h3>
+              </div>
+              <div className="space-y-4">
+                {members.map((member) => (
+                  <div key={member.name} className="rounded-2xl bg-cream-dark p-5">
+                    <p className="text-lg font-semibold text-text">{member.name}</p>
+                    <p className="mt-1 text-base text-text-muted">({member.institution})</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </FadeIn>
+
+          <FadeIn delay={0.1}>
+            <div className="h-full rounded-3xl border border-border/50 bg-cream-dark p-8 shadow-md lg:p-10">
+              <div className="mb-7 flex items-center gap-3">
+                <Handshake className="h-7 w-7 text-green" />
+                <h3 className="font-display text-2xl font-bold text-text">Equipe colaboradora</h3>
+              </div>
+              <div className="grid gap-4 sm:grid-cols-3">
+                {collaboratorMembers.map((member) => (
+                  <a
+                    key={member.name}
+                    href={member.href}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="group rounded-2xl bg-white p-5 transition-transform hover:-translate-y-1"
+                  >
+                    <p className="text-lg font-semibold text-text group-hover:text-brown">{member.name}</p>
+                    <p className="mt-1 text-base text-text-muted">({member.institution})</p>
+                  </a>
+                ))}
+              </div>
             </div>
           </FadeIn>
         </div>

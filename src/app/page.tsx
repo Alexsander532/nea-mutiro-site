@@ -48,7 +48,7 @@ export default function HomePage() {
               <span className="h-1 w-12 rounded-full bg-green" />
               <p className="text-lg font-bold text-green">Núcleo de Estudos em Agroecologia</p>
             </div>
-            <h1 className="font-display text-4xl font-bold leading-tight text-brown md:text-5xl lg:text-[3.5rem] lg:leading-[1.1]">
+            <h1 className="max-w-2xl font-display text-3xl font-bold leading-tight text-brown md:text-4xl lg:text-[2.75rem] lg:leading-[1.12] xl:text-[3rem]">
               Trabalhar, compartilhar e construir uma outra sociedade com a Agroecologia.
             </h1>
             <p className="max-w-xl text-lg leading-relaxed text-text md:text-xl">
