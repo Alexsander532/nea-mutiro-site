@@ -231,7 +231,7 @@ export default function QuemSomosPage() {
             >
               <div>
                 {link.logo ? (
-                  <Image src={link.logo} alt={link.label} width={150} height={52} className="mb-5 h-12 w-auto object-contain" />
+                  <Image src={link.logo} alt={link.label} width={180} height={64} className="mb-5 h-12 w-auto object-contain" />
                 ) : (
                   <Handshake className="mb-5 h-10 w-10 text-green" />
                 )}

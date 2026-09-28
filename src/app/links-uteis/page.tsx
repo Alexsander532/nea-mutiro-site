@@ -32,6 +32,9 @@ export default function LinksUteisPage() {
               className="group flex min-h-40 flex-col justify-between rounded-2xl border border-border/50 bg-white p-6 shadow-sm transition-transform hover:-translate-y-1"
             >
               <div>
+                <div className="mb-5 flex h-16 items-center">
+                  <Image src={link.logo} alt={link.label} width={190} height={64} className="h-14 w-auto max-w-full object-contain" />
+                </div>
                 <p className="font-display text-xl font-bold text-text">{link.label}</p>
                 <p className="mt-2 text-sm text-text-muted">{link.description}</p>
               </div>

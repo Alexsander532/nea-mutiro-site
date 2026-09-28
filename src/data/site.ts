@@ -11,21 +11,25 @@ export const institutionalLinks = [
     label: "CEFET-MG – Campus Nova Suíça",
     description: "Instituição executora",
     href: "https://www.cefetmg.br/",
+    logo: "/logos/divididos/CEFET-MG_transparente.png",
   },
   {
     label: "UEMG",
     description: "Instituição executora",
     href: "https://www.uemg.br/",
+    logo: "/logos/divididos/UEMG_transparente.png",
   },
   {
     label: "Fiocruz Minas – Instituto René Rachou",
     description: "Instituição executora",
     href: "https://minas.fiocruz.br/",
+    logo: "/logos/FioCruz minas.png",
   },
   {
     label: "CNPq",
     description: "Financiamento",
     href: "https://www.gov.br/cnpq/pt-br",
+    logo: "/logos/divididos/CNPq_transparente.png",
   },
 ] as const;
 
