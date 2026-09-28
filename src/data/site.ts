@@ -6,6 +6,8 @@ export const contact = {
   instagramUrl: "https://www.instagram.com/neamutiro/",
 };
 
+export const youtubeUrl = "https://www.youtube.com/@NEAMutiró";
+
 export const institutionalLinks = [
   {
     label: "CEFET-MG – Campus Nova Suíça",
@@ -68,7 +70,7 @@ export const repositoryLinks = [
   {
     label: "Canal do YouTube",
     description: "Conteúdos audiovisuais sobre agroecologia e educação popular.",
-    href: "https://www.youtube.com/watch?v=X44rTqK-1qA",
+    href: youtubeUrl,
   },
 ] as const;
 

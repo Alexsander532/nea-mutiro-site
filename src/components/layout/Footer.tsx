@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { ExternalLink, Mail } from "lucide-react";
 import { InstagramIcon, YoutubeIcon } from "@/components/icons/SocialIcons";
-import { collaboratorLinks, contact, siteName } from "@/data/site";
+import { collaboratorLinks, contact, siteName, youtubeUrl } from "@/data/site";
 
 type FooterLogo = {
   src: string;
@@ -168,7 +168,7 @@ export function Footer() {
               <InstagramIcon className="h-5 w-5" />
             </a>
             <a
-              href="https://www.youtube.com/watch?v=X44rTqK-1qA"
+              href={youtubeUrl}
               target="_blank"
               rel="noreferrer"
               className="inline-flex rounded-full bg-cream-dark p-2 text-text transition-colors hover:bg-green-light/40"

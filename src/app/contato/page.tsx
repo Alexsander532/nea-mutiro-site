@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { Mail, MapPin, Send } from "lucide-react";
 import { FadeIn } from "@/components/motion/FadeIn";
 import { InstagramIcon, YoutubeIcon } from "@/components/icons/SocialIcons";
-import { contact, mapUrl, siteName } from "@/data/site";
+import { contact, mapUrl, siteName, youtubeUrl } from "@/data/site";
 import { useState } from "react";
 
 export default function ContatoPage() {
@@ -87,7 +87,7 @@ export default function ContatoPage() {
                   <InstagramIcon className="h-6 w-6 text-brown" />
                   <span>{contact.instagramHandle}</span>
                 </a>
-                <a href="https://www.youtube.com/watch?v=X44rTqK-1qA" target="_blank" rel="noreferrer" className="flex items-center gap-4 rounded-xl bg-white p-4 text-text transition-colors hover:text-brown">
+                <a href={youtubeUrl} target="_blank" rel="noreferrer" className="flex items-center gap-4 rounded-xl bg-white p-4 text-text transition-colors hover:text-brown">
                   <YoutubeIcon className="h-6 w-6 text-brown" />
                   <span>Canal do YouTube</span>
                 </a>
