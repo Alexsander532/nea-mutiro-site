@@ -17,21 +17,13 @@ export const members: Member[] = [
 
 export const collaboratorMembers: Member[] = [
   {
-    name: "PET conecTTE",
+    name: "Alexsander Augusto Lima",
     institution: "CEFET-MG",
     role: "Equipe colaboradora",
-    href: "https://www.petconectte.cefetmg.br/",
   },
   {
-    name: "Kaiporá",
-    institution: "UEMG",
-    role: "Equipe colaboradora",
-    href: "https://revista.uemg.br/index.php/sulear/article/view/6156",
-  },
-  {
-    name: "SoFiA",
+    name: "Isadora",
     institution: "CEFET-MG",
     role: "Equipe colaboradora",
-    href: "https://www.sofia.cefetmg.br/",
   },
 ];

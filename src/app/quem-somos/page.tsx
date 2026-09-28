@@ -118,16 +118,10 @@ export default function QuemSomosPage() {
               </div>
               <div className="grid gap-4 sm:grid-cols-3">
                 {collaboratorMembers.map((member) => (
-                  <a
-                    key={member.name}
-                    href={member.href}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="group rounded-2xl bg-white p-5 transition-transform hover:-translate-y-1"
-                  >
-                    <p className="text-lg font-semibold text-text group-hover:text-brown">{member.name}</p>
+                  <div key={member.name} className="rounded-2xl bg-white p-5">
+                    <p className="text-lg font-semibold text-text">{member.name}</p>
                     <p className="mt-1 text-base text-text-muted">({member.institution})</p>
-                  </a>
+                  </div>
                 ))}
               </div>
             </div>
