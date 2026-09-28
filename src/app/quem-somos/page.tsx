@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { ArrowUpRight, Building2, Handshake, Landmark, Sprout, Users } from "lucide-react";
 import { FadeIn, StaggerContainer } from "@/components/motion/FadeIn";
-import { collaboratorMembers, members } from "@/data/members";
+import { collaboratorMembers, members, neaTeamMembers, territoryScholarshipMembers } from "@/data/members";
 import { collaboratorLinks, siteName } from "@/data/site";
 
 export const metadata: Metadata = {
@@ -88,18 +88,18 @@ export default function QuemSomosPage() {
           <p className="mb-4 text-sm font-semibold uppercase tracking-widest text-brown">Equipe</p>
           <h2 className="font-display text-3xl font-bold text-text md:text-4xl">Quem constrói o NEA Mutiró</h2>
           <p className="mt-6 text-lg leading-relaxed text-text-muted">
-            Coordenação e equipes colaboradoras atuam na construção compartilhada das ações do núcleo.
+            Coordenação, equipe técnica, bolsistas colaboradores e bolsistas dos territórios atuam na construção compartilhada das ações do núcleo.
           </p>
         </FadeIn>
 
-        <div className="grid gap-8 lg:grid-cols-[1fr_1.5fr]">
+        <div className="space-y-8">
           <FadeIn>
-            <div className="h-full rounded-3xl border-2 border-border/50 bg-white p-8 shadow-md lg:p-10">
+            <div className="rounded-3xl border-2 border-border/50 bg-white p-8 shadow-md lg:p-10">
               <div className="mb-7 flex items-center gap-3">
                 <Users className="h-7 w-7 text-brown" />
                 <h3 className="font-display text-2xl font-bold text-text">Coordenação</h3>
               </div>
-              <div className="space-y-4">
+              <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
                 {members.map((member) => (
                   <div key={member.name} className="rounded-2xl bg-cream-dark p-5">
                     <p className="text-lg font-semibold text-text">{member.name}</p>
@@ -111,13 +111,47 @@ export default function QuemSomosPage() {
           </FadeIn>
 
           <FadeIn delay={0.1}>
-            <div className="h-full rounded-3xl border border-border/50 bg-cream-dark p-8 shadow-md lg:p-10">
+            <div className="rounded-3xl border border-border/50 bg-cream-dark p-8 shadow-md lg:p-10">
               <div className="mb-7 flex items-center gap-3">
                 <Handshake className="h-7 w-7 text-green" />
-                <h3 className="font-display text-2xl font-bold text-text">Equipe colaboradora</h3>
+                <h3 className="font-display text-2xl font-bold text-text">Equipe NEA Mutiró</h3>
               </div>
-              <div className="grid gap-4 sm:grid-cols-3">
+              <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                {neaTeamMembers.map((member) => (
+                  <div key={member.name} className="rounded-2xl bg-white p-5">
+                    <p className="text-lg font-semibold text-text">{member.name}</p>
+                    <p className="mt-1 text-base text-text-muted">({member.institution})</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </FadeIn>
+
+          <FadeIn delay={0.2}>
+            <div className="rounded-3xl border border-border/50 bg-white p-8 shadow-md lg:p-10">
+              <div className="mb-7 flex items-center gap-3">
+                <Handshake className="h-7 w-7 text-brown" />
+                <h3 className="font-display text-2xl font-bold text-text">Equipe de bolsistas colaboradores</h3>
+              </div>
+              <div className="grid gap-4 sm:grid-cols-2">
                 {collaboratorMembers.map((member) => (
+                  <div key={member.name} className="rounded-2xl bg-cream-dark p-5">
+                    <p className="text-lg font-semibold text-text">{member.name}</p>
+                    <p className="mt-1 text-base text-text-muted">({member.institution})</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </FadeIn>
+
+          <FadeIn delay={0.3}>
+            <div className="rounded-3xl border border-border/50 bg-cream-dark p-8 shadow-md lg:p-10">
+              <div className="mb-7 flex items-center gap-3">
+                <Sprout className="h-7 w-7 text-green" />
+                <h3 className="font-display text-2xl font-bold text-text">Bolsistas dos territórios</h3>
+              </div>
+              <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                {territoryScholarshipMembers.map((member) => (
                   <div key={member.name} className="rounded-2xl bg-white p-5">
                     <p className="text-lg font-semibold text-text">{member.name}</p>
                     <p className="mt-1 text-base text-text-muted">({member.institution})</p>
