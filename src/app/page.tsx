@@ -49,9 +49,7 @@ export default function HomePage() {
               <p className="text-lg font-bold text-green">Núcleo de Estudos em Agroecologia</p>
             </div>
             <h1 className="font-display text-4xl font-bold leading-tight text-brown md:text-5xl lg:text-[3.5rem] lg:leading-[1.1]">
-              Aprender e trabalhar
-              <br />
-              junto com a terra.
+              Trabalhar, compartilhar e construir uma outra sociedade com a Agroecologia.
             </h1>
             <p className="max-w-xl text-lg leading-relaxed text-text md:text-xl">
               O {siteName} articula ensino, pesquisa e extensão a partir da troca de saberes

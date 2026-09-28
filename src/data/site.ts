@@ -1,7 +1,7 @@
 export const siteName = "Núcleo de Estudos em Agroecologia – NEA Mutiró";
 
 export const contact = {
-  email: "contato@neamutiro.org.br",
+  email: "neamutiro2026@gmail.com",
   instagramHandle: "@neamutiro",
   instagramUrl: "https://www.instagram.com/neamutiro/",
 };
