@@ -43,7 +43,7 @@ export const neaTeamMembers: Member[] = [
 ];
 
 export const collaboratorMembers: Member[] = [
-  { name: "Alexsander Augusto Lima", institution: "CEFET-MG", role: "Bolsista colaborador" },
+  { name: "Alexsander Augusto Gonçalves de Lima", institution: "CEFET-MG", role: "Bolsista colaborador" },
   { name: "Isadora Viana Gualter", institution: "CEFET-MG", role: "Bolsista colaboradora" },
 ];
 
