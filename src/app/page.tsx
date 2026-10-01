@@ -31,9 +31,9 @@ const focalTerritories = [
     title: "Quilombo Córrego do Narciso",
     location: "Araçuaí (MG)",
     description: "Práticas agroecológicas, cultura e participação comunitária.",
-    heroImage: "/images/territorios/misturadas/0f1628c8-64c2-4ee7-a536-30be02c4f633.jpg",
+    heroImage: "/images/territorios/corrego-narciso/WhatsApp Image 2026-10-01 at 15.22.55.jpeg",
     image: "/images/territorios/misturadas/1e4b72c5-e212-4a12-9b34-f1606f7e0fe4.jpg",
-    alt: "Paisagem de um território quilombola",
+    alt: "Roda de conversa no Quilombo Córrego do Narciso",
     href: "/territorios/corrego-do-narciso",
   },
 ];
