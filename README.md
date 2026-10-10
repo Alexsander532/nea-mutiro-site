@@ -17,6 +17,10 @@
 
 ## 📋 Sobre o Projeto
 
+### Documentação para novos integrantes
+
+A pasta [docs](docs/README.md) contém um manual completo em português para os próximos integrantes do PET: preparação do ambiente, fundamentos de programação, arquitetura, páginas, dados, componentes, imagens, guias de alteração, integrações, revisão e publicação. Comece pelo [índice e roteiro de leitura](docs/README.md).
+
 O **NEA-Mutiró** é o site institucional do Núcleo de Estudos em Agroecologia e Bem-Viver, um projeto de extensão do **CEFET-MG** em parceria com a **UEMG** e a **FIOCRUZ Minas**.
 
 O núcleo articula **ensino, pesquisa e extensão** para fortalecer práticas agroecológicas junto a comunidades quilombolas, indígenas e periferias urbanas em Minas Gerais, unindo o conhecimento acadêmico aos saberes tradicionais.
